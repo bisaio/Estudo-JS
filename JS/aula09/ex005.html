@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body {
+            background: #7d45ff;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <b>DOM</b> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        // window.document.write(window.document.charset)
+        // window.document.write(window.navigator.appName)
+        // window.document.write(window.document.URL)
+
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        //[0] - está pegando o primeiro paragrafo - O [] vai ser usado mais quando for o Elements
+        
+        // window.document.write(`Está escrito assim : ${p1.innerText}`)
+        // corpo.style.background = 'grey'
+        // p1.style.color = 'black'    
+
+        // document.write(p1.innerHTML) //innerHTML traz junto a formatação
+        // window.alert(p1.innerHTML)
+
+        // d.style.background = 'green'
+        // d.innerText = 'Estou aguardando...'
+        // window.document.getElementById('msg').innerText = 'Olá!'
+        
+        // var d = document.getElementById('msg')
+        // var d = document.getElementsByName('msg')[0]
+        // var d = document.getElementsByClassName('msg')[0]
+        // d.innerText = 'Olá!'
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+        
+    </script>
+</body>
+
+</html>

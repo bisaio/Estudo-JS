@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulos</title>
+
+    <style>
+        #n2 {
+            margin-top: 3px;
+            margin-bottom: 5px;
+        }
+
+        #res{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col">
+        <div class="row">
+           1º Numero: <input type="number" name="n1" id="numero1">
+        </div>
+        <div id="n2" class="row">
+           2º Numero: <input type="number" name="n2" id="numero2">
+        </div>
+        <div class="row">
+            <input id="soma" type="button" value="Soma">
+            <input id="sub" type="button" value="Subtração">
+            <input id="multi" type="button" value="Multiplicação">
+            <input id="divisao" type="button" value="Divisão">
+        </div>
+        <div id="res" class="row"></div>
+    </div>
+    
+    <script>
+        class Elementos {
+
+            /** @returns {HTMLInputElement} */
+            static get numero1() {
+               return document.querySelector("#numero1")
+           }
+
+            /** @returns {HTMLInputElement} */
+            static get numero2() {
+               return document.querySelector("#numero2")
+           }
+
+             /** @returns {HTMLInputElement} */
+             static get btnSoma() {
+                return document.querySelector("#soma")
+            }
+
+             /** @returns {HTMLInputElement} */
+             static get btnSub() {
+                return document.querySelector("#sub")
+            }
+
+             /** @returns {HTMLInputElement} */
+             static get btnMulti() {
+                return document.querySelector("#multi")
+            }
+            
+             /** @returns {HTMLInputElement} */
+             static get btnDivisao() {
+                return document.querySelector("#divisao")
+            }
+
+            /** @returns {HTMLDivElement} */
+            static get Res() {
+                return document.querySelector("#res")
+            }
+        }
+
+        Elementos.btnSoma.addEventListener('click', soma)
+        Elementos.btnSub.addEventListener('click', sub)
+        Elementos.btnMulti.addEventListener('click', multi)
+        Elementos.btnDivisao.addEventListener('click', divisao)
+
+        
+        function soma () {
+            const n1 = Number(Elementos.numero1.value)
+            const n2 = Number(Elementos.numero2.value)
+            
+            const resultado = `O resultado da SOMA é ${n1 + n2}`
+            Elementos.Res.innerHTML = resultado
+        }
+
+        function sub () {
+            const n1 = Number(Elementos.numero1.value)
+            const n2 = Number(Elementos.numero2.value)
+
+            const resultado = `O resultado da SUBTRAÇÃO é ${n1 - n2}`
+            Elementos.Res.innerHTML = resultado
+        }
+
+        function multi () {
+            const n1 = Number(Elementos.numero1.value)
+            const n2 = Number(Elementos.numero2.value)
+
+            const resultado = `O resultado da MULTIPLICAÇÃO é ${n1 * n2}`
+            Elementos.Res.innerHTML = resultado
+        }
+
+        function divisao () {
+            const n1 = Number(Elementos.numero1.value)
+            const n2 = Number(Elementos.numero2.value)
+
+            if (n2 == 0){
+                Elementos.Res.innerHTML = "Divisão por 0 não é permitdo"
+            } else {
+                const resultado = `O resultado da DIVISÃO é ${n1 / n2}`
+                Elementos.Res.innerHTML = resultado
+            }
+        }
+
+    </script>
+</body>
+
+</html>

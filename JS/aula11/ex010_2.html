@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro</title>
+</head>
+
+<body>
+    <h1>Onde você mora?</h1>
+    <input class="btnNacionalidade" type="button" value="Brasil">
+    <input class="btnNacionalidade" type="button" value="EUA">
+    <input class="btnNacionalidade" type="button" value="França">
+    <input class="btnNacionalidade" type="button" value="Outro">
+
+    <div id="res"></div>
+
+    <script>
+        class Elementos {
+            /** @returns {HTMLInputElement} */
+            static get btnNacionalidades() {
+                return document.querySelectorAll(".btnNacionalidade")
+            }
+
+            /** @returns {HTMLDivElement} */
+            static get Res() {
+                return document.querySelector("#res")
+            }
+        }
+
+        Elementos.btnNacionalidades.forEach(btn => {
+            btn.addEventListener('click', function () {
+                BrOuEstrang(btn.value);
+            });
+        });
+
+        function BrOuEstrang(valor) {
+            if (valor == 'Brasil') {
+                Elementos.Res.innerHTML = `<p>Você é <strong>brasileiro</strong></p>`
+            } else {
+                Elementos.Res.innerHTML = `<p>Você é <strong>estrangeiro</strong></p>`
+            }
+        }
+    </script>
+</body>
+
+</html>
