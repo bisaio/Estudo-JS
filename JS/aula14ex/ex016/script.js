@@ -22,8 +22,6 @@ class Elementos {
 
 }
 
-
-
 Elementos.buttonContar.addEventListener('click', contarPassos)
 
 function contarPassos() {
@@ -31,34 +29,40 @@ function contarPassos() {
     const fim = parseInt(Elementos.inputFim.value)
     let passo = parseInt(Elementos.inputPasso.value)
 
-
-    if (inicio > fim) {
-        alert("O inicio da contagem nao pode ser menor que o fim")
+    if (isNaN(inicio) || isNaN(fim) || isNaN(passo)) {
+        alert("todos os campos devem ser preenchidos")
         return
     }
 
-    if (passo == 0) {
-        passo = 1
-        alert("O passo nao pode ser igual a zero, passado para passo 1")
-        return
+    if (passo === 0) {
+        inicio <= fim ? passo = 1 : passo = -1;
+        alert(`O passo nao pode ser igual a zero, ${inicio <= fim ? 'passado para 1' : 'passado para -1'}`)
     }
 
-    if (passo >= fim) {
-        alert("O passo nao pode ser maior ou igual que o fim")
+    if (inicio > fim && passo > 0) {
+        alert("O passo nao pode ser maior ou igual a zero em contagens decrescentes")
         return
     }
 
     let text = ""
 
-    for (let i = inicio; i <= fim; i += passo) {
-        text += `${i} ➡`
-        
-        if (i + passo > fim) {
-            text += "🏁"
+    if (inicio <= fim) {
+        for (let i = inicio; i <= fim; i += passo) {
+            text += `${i} ➡ `
+            
+            if (i + passo > fim) {
+                text += "🏁"
+            }
+        }
+    } else {
+        for (let i = inicio; i >= fim; i += passo) {
+            text += `${i} ➡ `
+            
+            if (i + passo < fim) {
+                text += "🏁"
+            }
         }
     }
 
     resultado.innerHTML = text
 }
-
-
