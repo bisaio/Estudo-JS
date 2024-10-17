@@ -1,0 +1,32 @@
+//executado em node (F8)
+
+let num = [5, 8, 2, 9, 3]
+
+num.sort()
+
+num.push(1)
+
+console.log('-----------------------------------------------------');
+
+console.log(num);
+console.log(`O vetor tem ${num.length} posições`);
+console.log(`O primeiro valor do vetor é ${num[0]}`); 
+
+console.log('estrutura for ---------------------------------------');
+
+for (i = 0; i < num.length; i++) {
+    //percurso para exebicao de vetores
+    console.log(`valor da chave ${i} = ${num[i]}`);
+}
+
+console.log('estrutura for in------------------------------------');
+// maneira de fazer com for in
+for (let i in num) {
+    console.log(`valor da chave ${i} = ${num[i]}`)
+}
+
+console.log('-----------------------------------------------------');
+pos = num.indexOf(8)
+console.log(`o valor 8 está na posição ${pos}`); //pegou do array ordenado
+pos = num.indexOf(4)
+console.log(`o valor 8 está na posição ${pos == -1 ? '[VALOR NAO ENCONTRADO]' : pos}`); 
