@@ -8,13 +8,16 @@ function fibonacci() {
     res.innerHTML = ''
 
     const num = numero.value
-    let fibo = 1
+    let sequence = 1
     let add = 0
+    let hold = 0
     
     for (i = 1; i <= num; i++) {
-        res.innerHTML += `${fibo} `
-        fibo += add
-        add = fibo
-        console.log(add); //FIXME - ajeitar a sequencia (5 = 1 1 2 3 5)
+        res.innerHTML += `${sequence} `
+        hold = sequence
+        sequence += add
+        add = hold
     }
 }
+
+//FIXME - tentar fazer de forma recursiva
