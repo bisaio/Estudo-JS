@@ -4,23 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercicio</title>
+    <title>Radar de velocidade</title>
 
-    <link rel="stylesheet" href="../estilo_exs.css">
+    <link rel="stylesheet" href="estilo_exs_radar.css">
 </head>
 
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Radar de velocidade</h1>
     </header>
 
     <section>
         <div>
-            Testando...
+            Velocidade permitida na via: <input type="number" id=""> 
         </div>
         <div>
-            Olá!
+            Velocidade que estava transitando: <input type="number" id="">
         </div>
+        <div class="small">
+            <small><span style="color: red; font-weight: bold;">ATENÇÃO:</span> Está sendo levado em conta a tolerância de 7Km/h para velocidades abaixo de 100Km/h e de 7% para velocidades acima de 100Km/h</small>
+        </div>
+        <div>
+            <input type="button" value="Calcular" id="calcular">
+        </div>
+        <div id="res"></div>
     </section>
 
     <footer>
