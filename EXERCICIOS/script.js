@@ -9,7 +9,8 @@ const atividades = [
     {link: 'radarVelocidade/radarVelocidade.html', nome: 'Radar de Velocidade'},
     {link: 'fibonacci/fibonacci.html', nome: 'Fibonacci'},
     {link: 'fatorial/fatorial.html', nome: 'Fatorial'},
-    {link: 'randomNumber/randomNumber.html', nome: 'Número aleatório'}
+    {link: 'randomNumber/randomNumber.html', nome: 'Número aleatório'},
+    {link: 'jokenpo/jokenpo.html', nome: 'Jokenpo'}
 ]
 
 const atvs = document.querySelector("#atvs")
@@ -17,8 +18,8 @@ const atvs = document.querySelector("#atvs")
 atividades.forEach(atividade => {
    atvs.innerHTML +=
     `
-    <a href='${atividade.link}'>
-        <section> ${atividade.nome} </section>
-    </a>
+        <a href='${atividade.link}'>
+            <section> ${atividade.nome} </section>
+        </a>
    ` 
 });
