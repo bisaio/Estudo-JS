@@ -1,5 +1,6 @@
 const confirmar = document.querySelector("#confirmar")
 const res = document.querySelector("#res")
+let selecionado = false
 
 confirmar.addEventListener('click', () => {
     const numeroAleatorio = Math.floor(Math.random() * 5) + 1
@@ -13,7 +14,7 @@ confirmar.addEventListener('click', () => {
         }
     })
 
-    if (selecionado === null) {
+    if (!selecionado) {
         alert("Por favor, selecione um número antes de confirmar."); return
     }
 
