@@ -33,3 +33,15 @@ footer {
     border-radius: 15px;
     box-shadow: 3px 3px 10px #00000042; 
 }
+
+canvas {
+    box-shadow: 2px 2px 12px #00000042; 
+    border-radius: 5px;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
