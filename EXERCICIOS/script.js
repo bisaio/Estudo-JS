@@ -10,7 +10,8 @@ const atividades = [
     {link: 'fibonacci/fibonacci.html', nome: 'Fibonacci'},
     {link: 'fatorial/fatorial.html', nome: 'Fatorial'},
     {link: 'randomNumber/randomNumber.html', nome: 'Número aleatório'},
-    {link: 'jokenpo/jokenpo.html', nome: 'Jokenpo'}
+    {link: 'jokenpo/jokenpo.html', nome: 'Jokenpo'},
+    {link: 'triangulos/triangulos.html', nome: 'Triângulos'}
 ]
 
 const atvs = document.querySelector("#atvs")

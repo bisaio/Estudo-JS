@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulos</title>
+
+    <link rel="stylesheet" href="../estilo_exs.css">
+</head>
+
+<body>
+    <header>
+        <h1>Triângulos</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Digite o tamanho dos lados do triângulo.</p>
+            <p>Lado A: <input type="number" id="a"></p>
+            <p>Lado B: <input type="number" id="b"></p>
+            <p>Lado C: <input type="number" id="c"></p>
+
+            <div class="small">
+                <small><span style="color: red; font-weight: bold;">ATENÇÃO:</span> Para formar um triângulo, a soma de quaisquer dois lados deve ser sempre maior que o terceiro lado.</small>
+            </div>
+
+            <p><input type="button" value="Confirmar" id="confirmar"></p>
+        </div>
+        
+        <div id="res"></div>
+
+        <canvas id="canvas" width="150" height="150" style=""></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; Bisaio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
