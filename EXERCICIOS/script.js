@@ -11,7 +11,8 @@ const atividades = [
     {link: 'fatorial/fatorial.html', nome: 'Fatorial'},
     {link: 'randomNumber/randomNumber.html', nome: 'Número aleatório'},
     {link: 'jokenpo/jokenpo.html', nome: 'Jokenpo'},
-    {link: 'triangulos/triangulos.html', nome: 'Triângulos'}
+    {link: 'triangulos/triangulos.html', nome: 'Triângulos'},
+    {link: 'equacao2grau/equacao2grau.html', nome: 'Equação de 2º grau'}
 ]
 
 const atvs = document.querySelector("#atvs")
