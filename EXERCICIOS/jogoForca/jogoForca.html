@@ -15,10 +15,16 @@
     </header>
 
     <section>
-        <div>
-            <p>Digite uma letra.</p>
+        <div id="div_word">
+            <p>Que palavra será jogada na forca?</p>
+            <input type="text" id="palavra">
+            <p><input type="button" value="Confirmar" id="confirm_word"></p>
+        </div>
+
+        <div id="div_letter" style="display: none;">
+            <p>Escolha uma letra.</p>
             <input type="text" id="letra">
-            <p><input type="button" value="Confirmar" id="confirmar"></p>
+            <p><input type="button" value="Confirmar" id="confirm_letter"></p>
         </div>
         <div id="res"></div>
     </section>
