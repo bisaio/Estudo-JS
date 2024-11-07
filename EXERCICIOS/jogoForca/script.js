@@ -1,4 +1,5 @@
 const letra = document.querySelector("#letra")
+const palavra = document.querySelector("#palavra")
 const res = document.querySelector("#res")
 const confirm_word = document.querySelector("#confirm_word")
 const confirm_letter = document.querySelector("#confirm_letter")
@@ -11,7 +12,8 @@ function forca() {
     word.style.display = 'none'
     letter.style.display = 'block'
 
-    res.innerHTML = `FORCA`
+    const chosenWord = palavra.value.split('')
+    res.innerHTML = `${'_ '.repeat(chosenWord.length)}`
 }
 
 //FIXME - implementar a possibilidade de escolher entre inserir a palavra ou colocar palavras pre-selecionadas
