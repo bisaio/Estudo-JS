@@ -29,25 +29,14 @@ function calculoDias() {
     let diffMonths = date1.getMonth() - date2.getMonth();
     let diffYears = date1.getFullYear() - date2.getFullYear();
 
-    if (date1.getDate() < date2.getDate()) {
-        diffMonths -= 1;
-    }
-
-    if (diffMonths < 0) {
-        diffYears -= 1;
-        diffMonths += 12;
-    }
-
-    if (diffYears >= 1 && diffMonths === 0) {
-        diffMonths = 12 * diffYears;
-    }
+    let totalMonths = (diffYears * 12) + diffMonths
 
     res.innerHTML =
         `   
             A diferença completa de:
             <br>Dias = <strong>${diffDays} dia(s)</strong>
             ${diffWeeks > 0 ? `<br>Semanas = <strong>${diffWeeks} semana(s)</strong>` : ""}
-            ${diffMonths > 0 ? `<br>Meses = <strong>${diffMonths} mês(es)</strong>` : ""}
+            ${totalMonths > 0 ? `<br>Meses = <strong>${totalMonths} mês(es)</strong>` : ""}
             ${diffYears > 0 ? `<br>Anos = <strong>${diffYears} ano(s)</strong>` : ""}
         `
 }
