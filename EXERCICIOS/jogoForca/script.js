@@ -13,7 +13,7 @@ function palavraForca() {
     letter.style.display = 'block'
 
     const chosenWord = palavra.value.split('')
-    res.innerHTML = `${'_ '.repeat(chosenWord.length)}`
+    // res.innerHTML = `${'_ '.repeat(chosenWord.length)}`
 
     confirm_letter.addEventListener("click", () => {
         letraForca(chosenWord)
@@ -22,14 +22,25 @@ function palavraForca() {
 
 function letraForca(palavra) {
     const chosenLetter = letra.value
-    let resultado = ""
+    let resultado = []
+    let count = 0
 
-    for (let posicao in palavra) {
-        if (chosenLetter == palavra[posicao]){
-            resultado += `<br>letra ${chosenLetter} encontrado na posição ${parseInt(posicao) + 1}`
-        } 
-
-        res.innerHTML = resultado
+    for (let letra in palavra) {
+        resultado.push("_")
     }
+
+    res.innerHTML = resultado
+
+    // while (count <= palavra.lenght) {
+
+    //     for (let posicao in palavra) {
+    //         if (chosenLetter == palavra[posicao]) {
+    //             resultado[posicao] = chosenLetter
+    //             count += 1
+    //         }
+
+    //         res.innerHTML = resultado
+    //     }
+    // }
 }
 //FIXME - implementar a possibilidade de escolher entre inserir a palavra ou colocar palavras pre-selecionadas
